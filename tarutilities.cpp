@@ -1,6 +1,6 @@
-#include "tarutilities.h"
+#include <tarlib/tarutilities.h>
 #include <fstream>
-#include "tarlib.h"
+#include <tarlib/tarlib.h>
 
 namespace tarlib
 {

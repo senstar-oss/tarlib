@@ -24,10 +24,10 @@
     <ClInclude Include="stringhelpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tarlib.h">
+    <ClInclude Include="include\tarlib\tarlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tarutilities.h">
+    <ClInclude Include="include\tarlib\tarutilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -57,6 +57,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -73,6 +74,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -84,10 +86,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="filesyshelpers.h" />
+    <ClInclude Include="include\tarlib\tarlib.h" />
+    <ClInclude Include="include\tarlib\tarutilities.h" />
     <ClInclude Include="stringhelpers.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="tarlib.h" />
-    <ClInclude Include="tarutilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="filesyshelpers.cpp" />

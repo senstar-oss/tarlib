@@ -9,7 +9,7 @@
 // |             No claim of suitability, guarantee, or any warranty whatsoever is provided.   |
 // +-------------------------------------------------------------------------------------------+
 
-#include "tarlib.h"
+#include <tarlib/tarlib.h>
 
 #include "filesyshelpers.h"
 #include "stringhelpers.h"
