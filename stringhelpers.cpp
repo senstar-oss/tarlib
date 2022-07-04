@@ -9,7 +9,6 @@
 // |             No claim of suitability, guarantee, or any warranty whatsoever is provided.   |
 // +-------------------------------------------------------------------------------------------+
 
-#include "stdafx.h"
 #include "stringhelpers.h"
 
 namespace tarlib

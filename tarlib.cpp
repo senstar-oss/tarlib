@@ -9,7 +9,6 @@
 // |             No claim of suitability, guarantee, or any warranty whatsoever is provided.   |
 // +-------------------------------------------------------------------------------------------+
 
-#include "stdafx.h"
 #include "tarlib.h"
 
 #include "filesyshelpers.h"
@@ -61,7 +60,7 @@ namespace tarlib
 
          char buffer[32] = {0};
          _i64toa_s(number, buffer, 32, 8);
-         int reslen = strlen(buffer);
+         auto reslen = strlen(buffer);
 
          char* result = new char[length];
          memset(result, '0', length);
@@ -260,7 +259,7 @@ namespace tarlib
                            size_t toread = (header.filesize - filetotal) > sizeof(bigblock) ? sizeof(bigblock) : (size_t)(header.filesize - filetotal);
                            if((toread % tarChunkSize) != 0)
                               toread = (1 + (toread / tarChunkSize)) * tarChunkSize;
-                           size_t left = (header.filesize - filetotal) > toread ? toread : (size_t)(header.filesize - filetotal);
+                           size_t left = (size_t)(header.filesize - filetotal) > toread ? toread : (size_t)(header.filesize - filetotal);
 
                            _tarfile.read(&bigblock[0], toread);
                            size_t byteread = _tarfile.gcount();
@@ -470,7 +469,7 @@ namespace tarlib
       if(left == 0)
          return 0;
 
-      if(left < chunksize)
+      if(left < (long long)chunksize)
          chunksize = (size_t)left;
 
       _filestream->read(buffer, chunksize);
